@@ -1,0 +1,74 @@
+/* Empty. Add your own CSS if you like */
+
+.item-dark {
+  background-color: black;
+}
+
+.score {
+  float: right;
+}
+
+.yellow {
+  color: #ffc900;
+}
+
+.red {
+  color: #e65656;
+}
+
+.green {
+  color: #1f8e3f;
+}
+
+.unbordered {
+  border: 0px;
+  padding: 8px 16px;
+}
+
+.ion-android-happy, .ion-android-sad {
+  font-size: 25px;
+}
+
+.scroll-content  {
+  padding: 5px;
+}
+
+.large-icon {
+  font-size: 60px;
+}
+
+.padl18 {
+  padding-left: 18px;
+}
+
+.centered-vertical {
+  float: left;
+  height: 100px;
+  width: 50%;
+  text-align: center;
+}
+
+.singkwenta {
+  width: 47%;
+  float: left;
+  margin: 5px;
+}
+
+.flexi {
+  display: flex;
+}
+
+.fleft {
+  float: left;
+  margin-right: 18px;
+}
+
+.sub {
+  float: right;
+  font-size: 13px;
+  color: #888888;
+}
+
+.medium {
+  font-size: 35px;
+}

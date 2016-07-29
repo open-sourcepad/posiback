@@ -1,0 +1,47 @@
+<ion-view view-title="My Feedbacks">
+
+  <ion-content class="padding">
+    <div class="card">
+        <div class="item item-divider">
+          Badges
+        </div>
+        <div class="item item-text-wrap">
+          <span class="fleft"><i class="icon medium yellow ion-android-star"></i><br>
+          </span>
+
+          <span class="fleft"><i class="icon medium ion-clock"></i><br>
+          </span>
+
+          <span class="fleft"><i class="icon medium red ion-ios-heart"></i><br>
+          </span>
+
+          <span class="fleft"><i class="icon medium green ion-leaf"></i><br>
+          </span>
+
+
+          <br>
+          <br>
+
+        </div>
+    </div>
+
+    <ion-item style="text-align:center" ng-repeat="feedback in feedbacks | orderBy:'-positive_feedbacks'">
+
+      <span ng-if="feedback.category == 1">
+        <i class="icon red large-icon ion-android-sad"></i>
+      </span>
+      <span ng-if="feedback.category == 2">
+        <i class="icon red large-icon ion-android-sad"></i>
+      </span>
+      <br>
+      <span class="name">{{feedback.content}}</span>
+    </ion-item>
+    <label>
+    <br>
+      <button style="width:100%" class="button" ng-click="logout()">
+        Logout
+      </button>
+    </label>
+
+  </ion-content>
+</ion-view>

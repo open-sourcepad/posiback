@@ -1,0 +1,48 @@
+<ion-view view-title="Add Feedback">
+  <ion-content>
+
+    <div class="list">
+      
+      <form name="feedbackForm">
+        <br>
+        <label for="singleSelect"> Select Employee: </label>
+        <select name="singleSelect" ng-model="feedback.user">
+           <option value="" ng-show="false"></option>
+           <option ng-repeat="option in users" value="{{option.id}}">{{option.email}}</option>
+        </select><br><br>
+
+        <span class="centered-vertical">
+          <i class="icon green large-icon ion-android-happy"></i><br>
+          <label>
+            <input type="radio"ng-model="feedback.faction" value="1"/>
+          </label>
+        </span>
+
+        <span class="centered-vertical">
+          <i class="icon red large-icon ion-android-sad"></i><br>
+          <label>
+            <input type="radio" ng-model="feedback.faction" value="2"/>
+          </label>
+        </span>
+
+        <label class="item item-input">
+          <textarea placeholder="Comments" ng-model="feedback.comment"></textarea>
+        </label>
+
+        <br>
+        <label>
+          <button class="button singkwenta button-positive" ng-click="sendFeedback(feedback)">
+            send
+          </button>
+        </label>
+
+        <label>
+          <button class="button singkwenta button-positive" ng-click="sendFeedback(credentials)">
+            send randomly
+          </button>
+        </label><br/>
+
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

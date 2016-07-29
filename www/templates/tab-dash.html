@@ -1,0 +1,40 @@
+<ion-view view-title="Dashboard">
+
+  <ion-content class="padding">
+    <!-- <ion-list>
+      <ion-item ng-repeat="user in feedbacks">
+        {{user.email}} : {{user.positive_feedbacks}}/{{user.negative_feedbacks}}
+      </ion-item>
+    </ion-list> -->
+    <!-- <div class="card">
+        <div class="item item-divider">
+            A line chart
+        </div>
+        <div class="item item-text-wrap">
+            <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series" options="{showTooltips: false}"></canvas>
+        </div>
+    </div> -->
+    <div clas="card">
+      <ion-item class="unbordered" ng-repeat="user in feedbacks | orderBy:'-positive_feedbacks'">
+        <span class="name">{{user.first_name}} {{user.last_name}}</span>
+        <span ng-if="user.positive_feedbacks > 0 && user.positive_feedbacks >= user.negative_feedbacks">
+          <span class="score" ng-class="colorMode(user.positive_feedbacks, user.negative_feedbacks)"><i class="icon ion-android-happy"></i></span>
+        </span>
+
+        <span ng-if="user.positive_feedbacks == 0">
+          <span class="score" ng-class="colorMode(user.positive_feedbacks, user.negative_feedbacks)"><i class="icon ion-android-sad"></i></span>
+        </span>
+      </ion-item>
+    </div>
+    <div class="card">
+        <div class="item item-divider">
+          Feedbacks
+        </div>
+        <div class="item item-text-wrap">
+          <canvas class="chart chart-pie" chart-data="data" chart-labels="labels"
+  chart-series="series" chart-click="onClick" chart-colours="colours"></canvas>
+        </div>
+    </div>
+
+  </ion-content>
+</ion-view>

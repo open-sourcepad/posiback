@@ -1,0 +1,26 @@
+<ion-view view-title="All Feedbacks">
+
+  <ion-content class="padding">
+    <ion-item  style="text-align:left" ng-repeat="feedback in feedbacks | orderBy:'-positive_feedbacks'">
+
+      <span ng-if="feedback.category == 1">
+        <i class="icon fleft green large-icon ion-android-happy"></i>
+      </span>
+      <span ng-if="feedback.category == 2">
+        <i class="icon fleft mred large-icon ion-android-sad"></i>
+      </span>
+      <span class="name"><b>{{feedback.nasiback.first_name}} {{feedback.nasiback.last_name}}</b></span>
+      <br>
+      <span class="name">{{feedback.content}}</span>
+      <br>
+      <span class="name sub">- {{feedback.nansiback.first_name}} {{feedback.nansiback.last_name}}</span>
+    </ion-item>
+    <label>
+    <br>
+      <button style="width:100%" class="button" ng-click="logout()">
+        Logout
+      </button>
+    </label>
+
+  </ion-content>
+</ion-view>

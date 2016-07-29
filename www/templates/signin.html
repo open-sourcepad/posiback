@@ -1,0 +1,27 @@
+<ion-modal-view>
+  <ion-header-bar class="">
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeDetail()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding" style="padding-top: 60px;">
+    <div class="list" style="text-align: center;">
+      <i class="icon ion-ios-analytics" style="font-size: 100px;
+  width: 100%;
+  text-align: center;
+  color: #4F8EF7;margin-bottom:15px;"></i>
+      <br>
+      <label class="item item-input" style="margin-top: 20px;">
+        <input type="text" placeholder="Email" ng-model="credentials.email">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="credentials.password">
+      </label>
+      <br>
+      <button style="width:100%" class="button button-positive" ng-click="signIn(credentials)">
+        Login
+      </button>
+    </div>
+  </ion-content>
+</ion-modal-view>
